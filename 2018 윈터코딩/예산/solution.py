@@ -1,6 +1,10 @@
 def solution(d, budget):
-    if sum(d) <= budget:
-        return len(d)
     d.sort()
-    d.pop()
-    return solution(d, budget)
+    return can_supply(d, budget)
+
+
+def can_supply(suppliable, budget):
+    if sum(suppliable) <= budget:
+        return len(suppliable)
+    suppliable.pop()
+    return can_supply(suppliable, budget)
