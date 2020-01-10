@@ -45,8 +45,8 @@
 
 ## 입출력 예
 
-- `dirs`: `ULURRDLLU`
+- `dirs`: 'ULURRDLLU'
 - `answer`: 7
 
-- `dirs`: `LULLLLLLU`
+- `dirs`: 'LULLLLLLU'
 - `answer`: 7
