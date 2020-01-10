@@ -1,7 +1,7 @@
 def solution(dirs):
     handled_out_of_range = ignore_out_of_range(dirs)
     handled_visit_twice = ignore_visit_twice(handled_out_of_range)
-    return len(set(frozenset(i) for i in handled_visit_twice))
+    return len(handled_visit_twice)
 
 def ignore_out_of_range(dirs):
     res = []
@@ -42,4 +42,4 @@ def ignore_visit_twice(dirs):
             moved = (current[0]-1, current[1])
             res.append([current, moved])
             current = moved
-    return res
+    return set(frozenset(i) for i in res)
