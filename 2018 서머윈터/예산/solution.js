@@ -9,7 +9,4 @@ const canSupply = (suppliable, budget) => {
     return canSupply(suppliable, budget);
 };
 
-const sum = sup => {
-    if(sup.length === 0) return 0;
-    return sup.reduce((x, acc) => x + acc);
-}
+const sum = sup => sup.reduce((x, acc) => x + acc, 0);
